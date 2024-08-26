@@ -78,3 +78,12 @@ score = "77";
 strToNum = String(score);
 console.log(typeof score);
 console.log(score);
+
+
+
+
+
+
+
+
+// -------------- String To Number coversion Confusion ------------------- 
