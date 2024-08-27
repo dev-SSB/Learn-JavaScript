@@ -76,8 +76,8 @@ strToNum = Boolean(score);
 // "77"  --> 77 --> string
 score = "77";
 strToNum = String(score);
-console.log(typeof score);
-console.log(score);
+// console.log(typeof score);
+// console.log(score);
 
 
 
@@ -86,4 +86,47 @@ console.log(score);
 
 
 
-// -------------- String To Number coversion Confusion ------------------- 
+// -------------- Confusion ------------------- 
+
+// "1" + 2 = 12
+// 2 + "1" = 21
+// "1" + 3 + 3 = 133
+// 3 + 3 + "5" = 65
+
+
+// Increment & Decrement 
+let num =5;
+// console.log( num++ );
+// console.log( ++num );
+
+
+
+
+
+
+// -------------- Comaparison of dataType ------------------- 
+
+// "2" > 1 = true
+// console.log("2" > 1);
+
+// null > 0 --> false
+// null == 0  --> false
+// null >= 0  --> true
+
+// undefined == 0 --> false
+// undefined > 0 --> false
+
+
+// strictly check
+// value & dataType Check
+// console.log(1 === "1");
+
+
+
+
+
+
+
+
+
+// -------------------------   --------------------------------- 
