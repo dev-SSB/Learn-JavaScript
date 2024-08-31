@@ -7,6 +7,8 @@ ARRAY.forEach ( ----- ){
 } 
 */
 
+// For Each Always return undefined
+
 
 
 
