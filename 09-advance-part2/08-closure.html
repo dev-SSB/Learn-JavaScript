@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scope & Closure</title>
+</head>
+<body>
+    <button id="green">Green</button>
+    <button id="orange">Orange</button>
+</body>
+
+<script>
+    // Lexical Scope : Inner Function ko Outer Function kA Access hai
+
+    function outer(){
+        let name="SSB";
+
+        function inner(){
+            console.log(`my name is ${name}`); 
+        }
+        inner();
+    }
+
+    // 
+    outer();
+
+    // Error : Not Access of Name variable 
+    // console.log(name);
+</script>
+
+<script>
+    // Lexical Scope & Closure
+
+    function makeFun(){
+        const name="Ayu";
+
+        function display(){
+            console.log(name);
+        }
+
+        // Full Lexical Scope return Hota Hai. Not Only display() Function
+        return display;
+    }
+
+    const myFun = makeFun();
+    myFun();
+</script>
+
+<script>
+        // Real World Example
+        function colorHandler(color) {
+            return function() {
+                document.body.style.backgroundColor = color;
+            };
+        }
+
+        // Set event handlers for the buttons
+        document.querySelector("#green").onclick = colorHandler("green");
+        document.querySelector("#orange").onclick = colorHandler("orange");
+</script>
+
+</html>
