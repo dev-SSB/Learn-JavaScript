@@ -11,7 +11,9 @@ let name1 = "SSB";
 let name2 = name1;
 name2 = "ayu";
 
+// ---> SSB
 console.log(name1);
+// ---> ayu
 console.log(name2);
 
 
@@ -32,5 +34,7 @@ let obj1 = {
 let obj2 = obj1;
 obj2.age = 20;
 
+// ---> { name: 'SSB', age: 20 }
 console.log(obj1);
+// ---> { name: 'SSB', age: 20 }
 console.log(obj2);

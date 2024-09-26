@@ -4,32 +4,52 @@
 // "33" --> Number
 let score = "33";
 let strToNum = Number(score);
+// ---> number
 // console.log(typeof strToNum);
+// ---> 33
 // console.log(strToNum);
 
 // "33abc" --> NAN
 score = "33abc";
 strToNum = Number(score);
-
+// ---> number
+// console.log(typeof strToNum);
+// ---> NaN
+// console.log(strToNum);
 
 // null --> 0
 score = null;
 strToNum = Number(score);
-
+// ---> number
+// console.log(typeof strToNum);
+// ---> 0
+// console.log(strToNum);
 
 // true --> 1
 score = true;
 strToNum = Number(score);
+// ---> number
+// console.log(typeof strToNum);
+// ---> 1
+// console.log(strToNum);
 
 
 // false --> 0
 score = false;
 strToNum = Number(score);
+// ---> number
+// console.log(typeof strToNum);
+// ---> 0
+// console.log(strToNum);
 
 
 // undefined --> NaN
 score = undefined;
 strToNum = Number(score);
+// ---> number
+// console.log(typeof strToNum);
+// ---> NaN
+// console.log(strToNum);
 
 
 // "pp" --> NaN
@@ -46,24 +66,38 @@ strToNum = Number(score);
 
 // 1 --> true
 score = 12;
-strToNum = Boolean(score);
-// console.log(typeof strToNum);
-// console.log(strToNum);
+numToBool = Boolean(score);
+// ---> boolean
+// console.log(typeof numToBool);
+// ---> true
+// console.log(numToBool);
 
 
 // 0 --> false
 score = 0;
-strToNum = Boolean(score);
+numToBool = Boolean(score);
+// ---> boolean
+// console.log(typeof numToBool);
+// ---> false
+// console.log(numToBool);
 
 
 // "SSB" --> true
 score = "SSB";
-strToNum = Boolean(score);
+numToBool = Boolean(score);
+// ---> boolean
+// console.log(typeof numToBool);
+// ---> true
+// console.log(numToBool);
 
 
 // "" --> false
 score = "";
-strToNum = Boolean(score);
+numToBool = Boolean(score);
+// ---> boolean
+// console.log(typeof numToBool);
+// ---> false
+// console.log(numToBool);
 
 
 
@@ -74,10 +108,12 @@ strToNum = Boolean(score);
 
 
 // "77"  --> 77 --> string
-score = "77";
-strToNum = String(score);
-// console.log(typeof score);
-// console.log(score);
+score = 77;
+numToStr = String(score);
+// ---> string
+// console.log(typeof numToStr);
+// ---> "77"
+// console.log(numToStr);
 
 
 
@@ -96,7 +132,9 @@ strToNum = String(score);
 
 // Increment & Decrement 
 let num =5;
+// ---> 5
 // console.log( num++ );
+// ---> 7
 // console.log( ++num );
 
 
@@ -119,13 +157,6 @@ let num =5;
 
 // strictly check
 // value & dataType Check
+// ---> false
 // console.log(1 === "1");
 
-
-
-
-
-
-
-
-// -------------------------   --------------------------------- 

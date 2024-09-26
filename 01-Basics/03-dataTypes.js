@@ -1,7 +1,7 @@
 // treat all JS code as Newer Version
 "use strict"; 
 
-// IUsed in Browser not in Node Compiler
+// It Used in Browser not in Node Compiler
 // alert(3+3)
 
 // Data Types
@@ -40,12 +40,14 @@ const newid = Symbol("123");
 
 // bigint
 const bigNum = 234567803446677n;
+// ---> bigInt
 // console.log(typeof bigNum);
 
 
 
 // array
 const arr = [1,2,3,4];
+// ---> object
 // console.log(typeof arr);
 
 
@@ -55,6 +57,7 @@ const obj = {
     name:"ssb",
     age:15
 };
+// ---> object
 // console.log(typeof obj);
 
 
@@ -65,17 +68,6 @@ const obj = {
 const fun = () => {
 
 };
-console.log(typeof fun);
-
-
-
-
-
-
-
-
-
-
-
-
+// ---> function
+// console.log(typeof fun);
 
