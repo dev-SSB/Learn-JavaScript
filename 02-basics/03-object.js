@@ -10,19 +10,41 @@ const jsUser = {
 };
 
 // console.log( jsUser.age );
+// 22
+
 // console.log( jsUser["email"] );
+// SSB@email.com
 
 
 // ------------------------- freeze() -----------------------------------
 
 jsUser.email = "random-email";
 // console.log(jsUser);
-
+/*
+{
+  name: 'SSB',
+  age: 22,
+  location: 'Nanded',
+  email: 'random-email',
+  isLoggedIn: false,
+  lastLoginDays: [ 'Mon', 'Sat' ]
+}
+*/
 
 // Object.freeze( name )
 Object.freeze(jsUser)
-jsUser.email = "after freeze email change"
+jsUser.email = "after freeze email Not change"
 // console.log(jsUser);
+/*
+{
+  name: 'SSB',
+  age: 22,
+  location: 'Nanded',
+  email: 'random-email',
+  isLoggedIn: false,
+  lastLoginDays: [ 'Mon', 'Sat' ]
+}
+*/
 
 
 
@@ -39,6 +61,14 @@ const user = {
     phone:1234567889
 };
 // console.log(user);
+/*
+{
+  name: 'user',
+  city: 'pune',
+  phone: 1234567889,
+  [Symbol(key1)]: 'myKey 1'
+}
+*/
 
 
 
