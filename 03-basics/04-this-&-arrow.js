@@ -21,10 +21,20 @@ const user = {
 }
 
 // user.welcomeMessage();
+/*
 
-// user.username = "Sunny"
+SSB , Welcome to BroadCast
+{
+  username: 'SSB',
+  price: 999,
+  welcomeMessage: [Function: welcomeMessage]
+}
+
+*/
+
+user.username = "Sunny"
 // user.welcomeMessage();
-/* output
+/* 
 
 Sunny , Welcome to BroadCast
 {
@@ -63,7 +73,21 @@ const talk2 = () => {
 
 
 
+/*
+How to Make It Work
+If you want this.userName to refer to a property of an object, you can define talk as a method of that object:
 
+Context of this: Inside the talk method, this refers to the person object because the 
+method is being called as a property of that object.
+*/
+const person = {
+    userName: "SSB",
+    talk: function() {
+        console.log(this.userName);
+    }
+};
+
+// person.talk(); // Output: "SSB"
 
 
 
@@ -78,7 +102,7 @@ const addTwo = (n1,n2) => {
     return n1+n2;
 }
 // console.log( addTwo(2,3) );
-
+// 5
 
 
 
@@ -86,13 +110,13 @@ const addTwo = (n1,n2) => {
 
 const sum = (num1,num2) => num1+num2;
 // console.log( sum(9,3) );
+// 12
 
 
 // Implicit Return
-
 const add = (num1,num2) => ( num1+num2 );
 // console.log( add(9,9) );
-
+// 18
 
 
 
@@ -100,6 +124,6 @@ const add = (num1,num2) => ( num1+num2 );
 
 const obj = () => ( {name:"SSB",age:23} );
 // console.log( obj() );
-
+// {name:"SSB",age:23}
 
 

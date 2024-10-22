@@ -35,11 +35,10 @@ const obj = {
 };
 
 // takeObj( obj );
-// takeObj( {
-//     name:"ayu",
-//     city:"Pune"
-// } );
+// Name is SSB & City is Nanded
 
+// takeObj( { name:"ayu",city:"Pune"} );
+// Name is ayu & City is Pune
 
 
 
@@ -53,6 +52,26 @@ function takeArray( anyArr ){
 };
 
 const arr = [200,300,"SSB",false];
-
 // takeArray( arr );
+// Value is SSB
+
 // takeArray( [100,200,300,500] );
+// Value is 300
+
+
+
+/*
+Modifying Arrays Inside Functions
+You can also modify the original array within a function.
+*/
+
+function doubleArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] *= 2; // Double each element
+    }
+}
+
+const myArray = [1, 2, 3];
+doubleArray(myArray);
+// console.log(myArray); 
+// Outputs: [2, 4, 6]

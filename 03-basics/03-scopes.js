@@ -106,6 +106,53 @@ if(true){
 
 // ------------------------ Function Hosting ---------------------------------
 
+/*
+
+Function Hoisting ---> 
+Function hoisting is a behavior in JavaScript where function declarations 
+are moved (or "hoisted") to the top of their containing scope during 
+compilation. This means you can call a function before it is defined in the code.
+
+*/
+
+
+/*
+Example 1: Function Declaration --->
+
+fun1(); // No Error
+
+function fun1() {
+    console.log("EUu");
+}
+
+Explanation:
+In this case, fun1 is a function declaration. When you call fun1() before its definition, 
+it works without any error because the function declaration is hoisted to the top.
+ The entire function definition is available before the code runs.
+
+*/
+
+
+/*
+
+Example 2: Function Expression --->
+
+// fun2(); // Error: Cannot access 'fun2' before initialization
+const fun2 = function() {
+    console.log("EUu");
+};
+
+
+Explanation:
+Here, fun2 is defined as a function expression using const.
+The line fun2(); is commented out because it would throw an error if 
+you try to call fun2() before it’s defined. Function expressions are not hoisted 
+in the same way as function declarations. Only the variable fun2 is hoisted, 
+but it is not initialized until the assignment occurs. Therefore, trying to 
+call fun2() before its definition results in a ReferenceError.
+
+*/
+
 
 // NOt Error
 fun1()
