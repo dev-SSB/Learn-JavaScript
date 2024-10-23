@@ -41,15 +41,34 @@ for (let index = 0; index < 10; index++) {
     }
     // console.log("Number "+ index);
 }
-
+/*
+Number 0
+Number 1
+Number 2
+Number 3
+Number 4
+detected 5
+*/
 
 
 
 // Continue 
 for (let index = 0; index < 10; index++) {
     if(index == 5){
-        // console.log("detected 5");
+        console.log("detected 5");
         continue;
     }
-    // console.log("Number "+ index);
+    console.log("Number "+ index);
 }
+/*
+Number 0
+Number 1
+Number 2
+Number 3
+Number 4
+detected 5
+Number 6
+Number 7
+Number 8
+Number 9
+*/

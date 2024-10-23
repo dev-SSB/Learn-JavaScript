@@ -37,7 +37,7 @@ switch(val1){
         console.log("Default");
         break;       
 }
-
+// SSB
 
 
 
@@ -58,8 +58,32 @@ switch(val2){
         console.log("Default");
         break;       
 }
+// 100
 
 
+
+
+const val3 = "PP";
+switch(val3){
+    case "PP":
+        console.log("PP");
+    case "Ayu":
+        console.log("Ayu");
+    case "SSB":
+        console.log("SSB");
+    default:
+        console.log("Default");
+        break;       
+}
+
+/* OUTPUT
+
+PP
+Ayu
+SSB
+Default
+
+*/
 
 
 

@@ -18,7 +18,7 @@ if(arr.length === 0)
     console.log("Empty Array");
 else
     console.log("NoN Empty Array");
-
+// Empty Array
 
 
 
@@ -35,4 +35,7 @@ if( Object.keys(obj).length === 0){
 else{
     console.log("NoN Empty Object");
 }
-    
+// NoN Empty Object    
+
+
+
