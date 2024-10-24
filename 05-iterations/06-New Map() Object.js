@@ -1,5 +1,7 @@
 // --------------------------- Map -----------------------------
 
+// Map() Object is different from map() method of array.
+
 /*
 
 The Map object holds key-value pairs and remembers the original insertion order of the keys. 
@@ -7,9 +9,19 @@ A key in the Map may only occur once; it is unique in the Map's collection.
 
 */
 
+// Map() Object can use any data type as keys.
+// object only have string or symbol data type as keys. all keys in object are converted to string if we use number.
+
+// key value pair, Remember Insertion Order, 
+
+// to check Key exist in Map() Object we use --> has() Method
+
+// we remove entries from Map() Object using --> delete() Method
 
 
-// ---- Map ------
+
+
+// ---- Map Object------
 
 let map1 = new Map();
 map1.set("a",1);
@@ -81,7 +93,7 @@ key: e & Value: 5
 
 
 
-// ---- ForIn Loop & Map  NO OUTPUT------
+// ---- For...In Loop & Map  NO OUTPUT------
 
 let map3 = new Map();
 

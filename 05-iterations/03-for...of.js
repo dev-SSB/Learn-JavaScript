@@ -5,6 +5,11 @@ for( let val of Name ){
 }
 */
 
+// for...of work on mainly Map() Object.
+// for..of Also work on Array.
+
+// But it not work directly on Objects. but we use Object.Keys(), Object.values(), or Object.entries() to convert Object into iterable format like Arrays.
+
 
 
 // ---- ForOf & Array ----

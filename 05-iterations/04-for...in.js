@@ -1,4 +1,12 @@
 // ------------------------------------ For In Loop ---------------------------------------
+
+
+// for...in loop is designed for iterating over eNumerable properties(keys) of an Object.
+
+// for...in Not Work on New Map() Object.
+
+
+
 /*
 for( let val in Name ){
     console.log(val);
@@ -13,14 +21,14 @@ for( let val in Name ){
 
 /*
 
-Object { key1:value, 
+Object { 
+    key1:value, 
     Key2:value
 }
 Index = key1 key2
 Value = Object[Index]
 
 */
-
 
 
 
