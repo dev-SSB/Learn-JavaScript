@@ -1,7 +1,19 @@
 // ---------------------------- reduce ----------------------------------
 
-// reduce funtion takes accumulator & currentValue.
-// firstly accumulator use initialValue.
+// let result = array.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue]);
+
+// reduce function must takes accumulator & currentValue.
+
+// firstly accumulator use initialValue. Then use previously returned value.
+
+// If no initial value is provided, reduce will use the first element as the initial value and start from the second element.
+
+// reduce always returns a single value
+
+// We can chain reduce with other array methods like filter and map.
+
+
+
 
 
 /*
