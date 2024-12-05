@@ -1,6 +1,18 @@
 // ------------ rest operator ---------------
 
-// ...price  --> Spread Operator
+
+// Spread Operator used to expand and Array.
+// const arr1 = [1,2,3];
+// const arr2 = [4,true,"ssb"];
+// const arr = [...arr1,...arr2];
+// console.log(arr);
+//  Output : [ 1, 2, 3, 4, true, 'ssb' ]
+
+
+
+
+// ...price  --> Here It is Rest Operator
+// rest operator used to collects number of arguments into an Array.
 function calculatePrice( ...price ){
     return price;
 };

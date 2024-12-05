@@ -1,13 +1,14 @@
 // --------------------------------- this ---------------------------------------
 
-// this refer to the current context
+// this refer to the current object or context
 
 
 const user = {
     username:"SSB",
     price:999,
 
-    welcomeMessage:function(){
+    // Method
+    welcomeMessage: function(){
         console.log( `${this.username} , Welcome to BroadCast` );
         console.log(this);
         /* Output of this
@@ -47,6 +48,14 @@ Sunny , Welcome to BroadCast
 
 
 
+
+
+
+// Here this refer to Global Object or undefined in strict Mode.
+// Global Object means Window.
+
+
+// Regular Function
 // Not Work ---> undefined
 // function talk(){
 //     let userName = "SSB";
@@ -55,6 +64,7 @@ Sunny , Welcome to BroadCast
 // talk()
 
 
+// Function Expression
 // Not Work ---> undefined
 // const talk = function(){
 //     let userName = "SSB";
@@ -63,7 +73,7 @@ Sunny , Welcome to BroadCast
 // talk()
 
 
-
+// Basic Fat Arrow Function
 // Not Work ---> undefined
 const talk2 = () => {
     let userName = "SSB";
