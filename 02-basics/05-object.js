@@ -73,3 +73,14 @@ const { name: name3, age: age3 } = user3;
 // console.log(name3, age3); 
 // Output: Charlie 35
 
+
+// const users = [
+//     { id: 1, name: 'Alice', age: 25 },
+//     { id: 2, name: 'Bob', age: 30 },
+//     { id: 3, name: 'Charlie', age: 35 }
+// ];
+
+// const [{ id: id1, name: name1, age: age1 }, u2, u3] = users;
+
+// console.log(id1, name1, age1); // Outputs: 1 Alice 25
+
