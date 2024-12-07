@@ -1,6 +1,17 @@
 // ---------------  Fetch  --------------------
 
+/*
 
+Fetch is modern js API used to send request and receive response from server.
+
+fetch api built on Promise.
+
+fetch return Promise.
+
+fetch() method starts the process of fetching resource from network and return Promise.
+
+
+*/
 
 
 
