@@ -1,18 +1,21 @@
 // ---------------------------------- Filter ------------------------------------------
 
-// let newArray = array.filter( callback(element[, index[, array]] ) [, thisArg] );
+/*
 
-// Filter Alaways return New Array
+let newArray = array.filter( callback(element, index, array) , thisArg );
+where index, array, thisArg are optional.
 
-// Filter Check Condition Must be true
+Filter Alaways return New Array.
 
-// Filter Not Modify Original Array
+Filter Check Condition Must be true.
 
+Filter Not Modify Original Array.
 
-// callback is A function that is called for each element in the array. It should return true to keep the element, or false otherwise.
+Filter applay callback function to each element in the array. It should return true to keep the element in new Array.
 
-// It can be chained with other array methods like map and reduce.
+It can be chained with other array methods like map and reduce.
 
+*/
 
 
 
@@ -142,4 +145,19 @@ const mixedArray = [1, null, 2, undefined, 3];
 const filteredArray = mixedArray.filter(Boolean); // Removes falsy values
 // console.log(filteredArray); 
 // Output: [1, 2, 3]
+
+
+
+
+
+// --- Filtering Arrays with undefined  ---
+let array = [10, undefined, 30, , 50]; 
+
+let filtered = array.filter( (val) => {
+    return val !== undefined
+});
+
+console.log(filtered);
+// Output: [10, 30, 50]
+
 
