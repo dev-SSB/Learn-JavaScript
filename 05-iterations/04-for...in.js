@@ -96,3 +96,34 @@ key:- game2 & Value:- GTA
 key:- game3 & Value:- PUBG
 
 */
+
+
+
+
+
+
+
+// ---- Iterating over nested objects ----
+
+let user = {
+    name: "Alice",
+    details: {
+      age: 25,
+      role: "Admin",
+    },
+  };
+  
+  for (const key in user) {
+    if (typeof user[key] === "object") {
+      for (const subKey in user[key]) {
+        console.log(`${subKey}: ${user[key][subKey]}`);
+      }
+    } else {
+      console.log(`${key}: ${user[key]}`);
+    }
+  }
+  // Output:
+  // name: Alice
+  // age: 25
+  // role: Admin
+  
