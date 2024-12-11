@@ -1,3 +1,30 @@
+// --- OOP ---
+/*
+Understanding Object-Oriented Programming (OOP) Basics
+What is OOP?
+Four Pillars of OOP:
+Encapsulation
+Abstraction
+Inheritance
+Polymorphism
+Objects vs. Classes in JavaScript
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 Object-Oriented Programming (OOP) organizes code using objects and classes and make the code reusable, extensible, and easier to maintain.
