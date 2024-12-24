@@ -56,13 +56,18 @@ const newarr = arr3.join()
 // console.log(` arr3 ${arr3} `);
 // console.log(` newarr ${newarr} `);
 // console.log(` typeof newarr ${typeof newarr} `);
+/*
+ arr3 1,2,3,4,5 
+ newarr 1,2,3,4,5
+ typeof newarr string
+*/
 
 
 
 // ------------------------- Array Methods Slice Splice -----------------------------------
 
 const arrNew1 = [1,2,3,4,5,6]
-console.log(`arrNew1 : ${arrNew1}`);
+// console.log(`arrNew1 : ${arrNew1}`);
 
 
 // slice(start,end) --> Original Array Same
@@ -72,6 +77,12 @@ const arrNew2 = arrNew1.slice(1,4);
 // console.log(`arrNew2 : ${arrNew2}`); 
 // console.log(`arrNew1 : ${arrNew1}`);
 
+/* Output
+slice(1,4)
+arrNew2 : 2,3,4
+arrNew1 : 1,2,3,4,5,6
+*/
+
 
 // splice(start,end) --> Original Array Change
 const arrNew3 = arrNew1.splice(1,4);
@@ -80,17 +91,8 @@ const arrNew3 = arrNew1.splice(1,4);
 // console.log(`arrNew3 : ${arrNew3}`);
 // console.log(`arrNew1 : ${arrNew1}`);
 
-
-/* Display ABove slice() & Splice()
-
-arrNew1 : 1,2,3,4,5,6
- 
-slice(1,4) 
-arrNew2 : 2,3,4
-arrNew1 : 1,2,3,4,5,6
-
-splice(1,4)
+/* OUTPUT
+splice(1,4) 
 arrNew3 : 2,3,4,5
 arrNew1 : 1,6
-
 */

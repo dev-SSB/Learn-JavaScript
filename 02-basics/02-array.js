@@ -63,13 +63,19 @@ let heros  = [ ...marval_heros, ...dc_heros ]
 let another_array = [ 1,2,3, [4,5,6], 7, [8, [9,10] ], 11 ];
 
 // console.log( another_array.flat(Infinity) );
-
+/*
+[
+   1, 2, 3, 4,  5,
+   6, 7, 8, 9, 10,
+  11
+]
+*/
 
 
 
 // ------------------------- Array.isArray() -----------------------------------
 // console.log( Array.isArray("pk") )
-
+// false
 
 
 
@@ -77,7 +83,9 @@ let another_array = [ 1,2,3, [4,5,6], 7, [8, [9,10] ], 11 ];
 // convert in to Array
 
 // console.log( Array.from("SSBPK") );
-
+/*
+[ 'S', 'S', 'B', 'P', 'K' ]
+*/
 
 
 
@@ -89,4 +97,4 @@ let num2 = 600;
 let num3 = 1200;
 
 // console.log( Array.of( num1,num2,num3 ) );
-
+// [ 100, 600, 1200 ]
