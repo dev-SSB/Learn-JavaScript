@@ -8,7 +8,7 @@ const div = document.createElement('div');
 div.id='main';
 div.className='myClassMain';
 
-// console.log(div);
+console.log(div);
 
 
 div.setAttribute('title','Generated Title');

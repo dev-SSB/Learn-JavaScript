@@ -1,3 +1,13 @@
+/*
+
+
+
+*/
+
+
+
+
+
 // ---------- getElementById, .id, .className, getAttribute, setAttribute -----------
 
 const title = document.getElementById("title");
@@ -8,7 +18,7 @@ const title = document.getElementById("title");
 // console.log( title.getAttribute('id') );
 // console.log( title.getAttribute('class') );
 
-title.setAttribute('class','heading test h1-first')
+// title.setAttribute('class','heading test h1-first')
 // console.log(title.className);
 
 
