@@ -11,6 +11,7 @@ const obj = {
 }
 
 // console.log(obj.age)
+// 90
 
 // SSB
 const { name } = obj;

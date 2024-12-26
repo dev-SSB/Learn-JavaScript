@@ -9,11 +9,28 @@ const jsUser = {
     lastLoginDays: ["Mon","Sat"]
 };
 
+// console.log(jsUser);
+/* OUTPUT
+
+{
+  name: 'SSB',
+  age: 22,
+  location: 'Nanded',
+  email: 'SSB@email.com',
+  isLoggedIn: false,
+  lastLoginDays: [ 'Mon', 'Sat' ]
+}
+
+*/
+
 // console.log( jsUser.age );
 // 22
 
 // console.log( jsUser["email"] );
 // SSB@email.com
+
+
+
 
 
 // ------------------------- freeze() -----------------------------------
@@ -34,6 +51,7 @@ jsUser.email = "random-email";
 // Object.freeze( name )
 Object.freeze(jsUser)
 jsUser.email = "after freeze email Not change"
+
 // console.log(jsUser);
 /*
 {
@@ -50,9 +68,14 @@ jsUser.email = "after freeze email Not change"
 
 
 
+
 // ---------- Interview QUestion Add Symbol in Object -------------
 
 const mySymbol = Symbol("key1");
+
+// console.log(mySymbol);
+// OUTPUT
+// Symbol(key1)
 
 const user = {
     name:"user",
@@ -60,14 +83,17 @@ const user = {
     city:"pune",
     phone:1234567889
 };
+
 // console.log(user);
-/*
+/* OUTPUT
+
 {
   name: 'user',
   city: 'pune',
   phone: 1234567889,
   [Symbol(key1)]: 'myKey 1'
 }
+  
 */
 
 

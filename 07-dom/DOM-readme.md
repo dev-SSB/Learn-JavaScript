@@ -227,14 +227,108 @@ Introduction to DOM (Document Object Model)
 
 ➡️ Creating and Inserting Elements 
     👉 Creating Elements 
-        ⚪
+        1) document.createElement()
+            ⚪ Creates a new HTML element.
+            ⚪ Syntax: let newElement = document.createElement('tagName');
+            ⚪ Example:
+                let newDiv = document.createElement('div'); 
+                newDiv.innerText = 'Hello, I am a new div!';
+                newDiv.style.color = 'blue';
+                document.body.appendChild(newDiv); 
+
+                Result: A new <div> with blue text is added to the end of the <body>.
+
+        2) document.createTextNode()
+            ⚪ Creates a text node that can be added to an element.
+            ⚪ Syntax: let textNode = document.createTextNode('Some Text');
+            ⚪ Example:
+                let text = document.createTextNode('Hello, I am plain text!');
+                let newDiv = document.createElement('div');
+                newDiv.appendChild(text); 
+                document.body.appendChild(newDiv);
+
+                Result: A <div> with plain text is added to the end of the <body>. 
+
     👉 Appending, Inserting, and Removing Elements
-        ⚪
-    👉 append() and prepend() (Modern Methods)
-        ⚪
-    👉 Removing Elements with remove() (Modern Method) 
-        ⚪
-    👉 Comparison 
-        ⚪
+        1) appendChild()
+            ⚪ Appends a child node (element or text) as the last child of a parent node.
+            ⚪ Syntax: parent.appendChild(child);
+            ⚪ Example:
+                let text = document.createTextNode('Hello, I am plain text!');
+                let newDiv = document.createElement('div');
+                newDiv.appendChild(text); 
+                document.body.appendChild(newDiv);
+
+                Result: A <div> with plain text is added to the end of the <body>. 
+            ⚪ ⚠️ Limitation: We can only append a single node.
+        
+        2) insertBefore()
+            ⚪ Inserts a node before a reference node under a parent node.
+            ⚪ Syntax: parent.insertBefore(newElement, referenceElement);
+            
+        3) removeChild()
+            ⚪ Removes a child node from a parent node.
+            ⚪ Syntax: parent.removeChild(child); 
+
+    👉 Modern Methods
+        1) append()
+            ⚪ Adds one or more nodes or text strings to the end of a parent node.
+            ⚪ Syntax: parent.append(node, 'string');
+            ⚪ Example:
+                let div = document.getElementById('box');
+                div.append('New Text Content', document.createElement('span'));
+
+                Result: Adds both text and an empty <span> at the end.
+
+        2) prepend()
+            ⚪ Adds one or more nodes or text strings to the start of a parent node.
+            ⚪ Syntax: parent.prepend(node, 'string');
+            ⚪ Example:
+                let div = document.getElementById('box');
+                div.prepend('Prepended Text', document.createElement('span'));
+
+                Result: Adds both text and an empty <span> at the beginning.
+        3) remove()
+            ⚪ Directly removes an element from the DOM.
+            ⚪ Syntax: element.remove(); 
+
     👉 Key Takeaways
-        ⚪
+        ⚪ Prefer modern methods like append(), prepend(), and remove() when supported. 
+
+
+➡️ Styling DOM Elements
+    👉 Modifying CSS Properties Using the style Property
+        ⚪ Style property used to change the inline styles of an HTML element directly using JS.
+        ⚪ Syntax: element.style.property = "value";
+        ⚪ The property names are written in camelCase instead of kebab-case.
+            Ex. 
+                box.style.backgroundColor = 'lightblue';
+                box.style.border = '2px solid black';
+                box.style.textAlign = 'center';
+        ⚪ Prefer to Not use More: 
+            overrides external or internal styles.
+            hard to manage.
+
+    👉 Using classList to Manipulate CSS Classes
+        classList property is a more efficient way to apply and manage styles, especially when working with predefined CSS classes.
+        
+        1) classList.add()
+            ⚪ Adds one or more classes to an element.
+            ⚪ Syntax: element.classList.add('class1', 'class2');
+        
+        2) classList.remove()
+            ⚪ Removes one or more classes from an element.
+            ⚪ Syntax: element.classList.remove('class1', 'class2');
+
+        3) classList.toggle()
+            ⚪ Toggles (adds/removes) a class from an element.
+            ⚪ If the class is not present, it adds it.
+            ⚪ If the class is present, it removes it.
+            ⚪ Syntax: element.classList.toggle('class');
+
+    👉 Key Takeaways
+        Prefer classList for maintainability and cleaner code.
+
+
+➡️ 
+    👉

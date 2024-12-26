@@ -2,6 +2,13 @@
 // Creating an object using new Object()
 const person = new Object();
 
+// console.log(person);
+/* OUTPUT
+
+{   }
+
+*/
+
 // Adding properties
 person.name = 'Alice';
 person.age = 30;
@@ -84,7 +91,7 @@ const o3 = {
 
 // Object.assign( target, source )
 const obj2 = Object.assign({},o1,o2,o3);
-console.log(obj2);
+// console.log(obj2);
 // { '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
 
 
