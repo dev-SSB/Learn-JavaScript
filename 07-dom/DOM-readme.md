@@ -330,5 +330,175 @@ Introduction to DOM (Document Object Model)
         Prefer classList for maintainability and cleaner code.
 
 
-➡️ 
-    👉
+➡️ Event Handling
+    Event handling is the process of capturing user interactions or other events in a web application and executing specific JavaScript code in response.
+
+    👉 Introduction to Events
+        ⚪ Event: Event is an action detected by the browser. 
+            Example of Events: click, mouseover, keydown, submit.
+        ⚪ Event Listeners: 
+            JS uses event listeners to respond to events.
+            Syntax: element.addEventListener('event', eventHandlerFunction, useCapture);
+
+    👉 addEventListener()
+        ⚪ Adds an event handler to an element without overwriting existing event handlers.
+        ⚪ Syntax: element.addEventListener('event', eventHandlerFunction, useCapture);
+            Where, 
+                event - The type of event (e.g., click, mouseover).
+                eventHandler - Function to handle the event.
+                useCapture (optional) - Boolean (true for capture phase, false for bubbling phase).
+        ⚪ Example:
+            <button id="btn">Click Me</button>
+            <script>
+                const btn = document.getElementById('btn');
+                btn.addEventListener('click', () => {
+                    console.log('Button Clicked!');
+                });
+            </script>
+
+    👉 removeEventListener()
+        ⚪ Removes an event handler previously added with addEventListener.
+        ⚪ Syntax: element.removeEventListener('event', eventHandler);
+        ⚪ Example:
+            <button id="stopButton">Stop Click Event</button>
+            <script>
+                function sayHello() {
+                    console.log('Hello!');
+                }
+                const stopButton = document.getElementById('stopButton');
+                stopButton.addEventListener('click', sayHello);
+
+                setTimeout(() => {
+                    stopButton.removeEventListener('click', sayHello);
+                    console.log('Event listener removed');
+                }, 5000);
+            </script>
+
+    👉 Event Propagation: 
+        ⚪ Event Propagation Phases:
+            1) Capturing Phase:
+                Event starts from the window and travels down to the target element.
+            2) Target Phase:
+                Event reaches the target element.
+            3) Bubbling Phase:
+                Event bubbles back up from the target to the window.
+
+        ⚪ Event Bubbling (useCapture = false):
+            Default behavior.
+            The event is handled from the target element upwards.
+
+            Example:
+                <div id="parent" style="padding: 20px; background-color: lightblue;">
+                    <button id="child">Click Me</button>
+                </div>
+
+                <script>
+                    document.getElementById('parent').addEventListener('click', () => {
+                        console.log('Parent clicked (Bubbling)');
+                    });
+
+                    document.getElementById('child').addEventListener('click', () => {
+                        console.log('Child clicked');
+                    });
+                </script>
+
+            Output Order (on clicking child button):
+                Child clicked
+                Parent clicked (Bubbling)
+
+        ⚪ Event Capturing (useCapture = true):
+            The event is handled from the outermost element down to the target.
+
+            Example:
+                document.getElementById('parent').addEventListener('click', () => {
+                    console.log('Parent clicked (Capturing)');
+                }, true);
+
+                document.getElementById('child').addEventListener('click', () => {
+                    console.log('Child clicked');
+                });
+            
+            Output Order (on clicking child button):
+                Parent clicked (Capturing)
+                Child clicked
+
+        ⚪ Stopping Propagation:
+            Use event.stopPropagation() to stop event propagation.
+            Example:
+                document.getElementById('child').addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    console.log('Child clicked, propagation stopped');
+                });
+
+    👉 DOM Events: 
+        ⚪ click : Triggered when an element is clicked.
+        ⚪ submit : Triggered when a form is submitted.
+        ⚪ keydown & keyup : Triggered when a key is pressed or released.
+        ⚪ mouseover: Triggered when the mouse enters an element.
+        ⚪ mouseout: Triggered when the mouse leaves an element.
+
+    👉 Event Object
+        ⚪ The event object contains details about the event.
+        ⚪ Common properties:
+            event.target: The element that triggered the event.
+            event.type: The type of event.
+            event.preventDefault(): Prevents default behavior.
+            event.stopPropagation(): Stops event bubbling.
+
+
+➡️ Event Delegation
+    ⚪ Event Delegation is a technique in JavaScript where a single event listener is added to a parent element to manage events for multiple child elements, even those that are dynamically added in the future.
+
+    ⚪ How Work?
+        Instead of adding individual event listeners to each child element, an event listener is added to a parent element.
+
+        Events bubble up from child elements to the parent (via Event Bubbling) where the event listener is triggered.
+
+        The event.target property identifies which child element triggered the event.
+
+    ⚪ Why use?
+        Improved Performance: Avoid adding event listeners to every child element.
+
+        Handles Dynamic Content: Newly added child elements automatically inherit the event listener.
+
+        Cleaner Code: Centralized event management.
+
+    ⚪ Example:
+        <ul id="parentList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <script>
+            const parentList = document.getElementById('parentList');
+            parentList.addEventListener('click', (event) => {
+                if (event.target.tagName === 'LI') {
+                console.log(event.target.textContent);
+                }
+            });
+        </script>
+
+
+➡️ Form Handling with DOM
+    We can access and update form elements using the document.forms collection or by targeting individual form elements using their ID, name, or class.
+
+    👉 Accessing Form & Elements
+        ⚪ document.forms: Accesses all forms on a page.
+        ⚪ form.elements: Accesses individual elements within a form.
+
+    👉 Accessing Input Values
+        Image See
+
+    👉 Handling Form Submissions
+        ⚪ Forms can be handled using the submit event. This is typically done to validate data or prevent default form submission behavior.
+        ⚪ event.preventDefault() : Prevent form from refreshing the page
+        ⚪ event.submit() : submit the form 
+
+    👉 Handling Form Reset
+        ⚪ reset() Method: Resets the form to its initial state.
+
+    👉 Validating Form Data
+        ⚪ Before submitting, it’s common to validate form fields to ensure correctness.
+
+    👉 Events in Form : submit, reset, change, input, focus, blur
+        Image see 
